@@ -75,16 +75,7 @@ Metric	Score
 Accuracy	92.95%
 Recall	98.46%
 Precision	91%
-▶️ How to Run Locally
-1) Clone the repository
-git clone <your-repo-link>
-cd <your-repo-folder>
 
-2) Install dependencies
-pip install -r requirements.txt
-
-3) Run the Streamlit app
-streamlit run app.py
 
 📌 Notes
 
