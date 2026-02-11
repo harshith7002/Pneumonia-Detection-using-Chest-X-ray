@@ -1,12 +1,15 @@
-# Pneumonia-Detection-using-Chest-X-ray
-Pneumonia Detection using Chest X-ray  
+Sure — here’s the updated README without the deployment link 👇 (copy-paste ready)
 
-Dataset: Kaggle - Chest X-ray(Pneumonia)
+🫁 Pneumonia Detection using Chest X-ray
 
-Dataset link: 
-https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data
+This project detects Pneumonia vs Normal from chest X-ray images using a CNN model trained with TensorFlow/Keras and deployed using Streamlit.
 
-Tech Stack:
+📌 Dataset
+
+Kaggle - Chest X-ray (Pneumonia)
+🔗 https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data
+
+🛠 Tech Stack
 
 Python
 
@@ -16,26 +19,79 @@ Keras
 
 Streamlit
 
-Data Preprocessing:
+📂 Data Split
 
-1. Initial train dataset of 5216 images is split into a training set of 4798 images and a validation set of 418 images in order to train the model.
-2. Image augmentation applied on training set: width shift, height shift,  brightness shift, rotation, zoom, pixel intensity variation using channel_shift, fill_mode, pixel value normalization using rescale.
-3. Rescale applied on both the validation and test datasets for pixel normalization.
-4. Input size is taken as 64x64 for all the images in a batch size of 32.
+The original training dataset contains 5216 images.
 
-Workflow:
+It is split into:
 
-<img width="456" height="1532" alt="image" src="https://github.com/user-attachments/assets/6f494611-0dc8-4f76-a2af-c7377904573e" />
+Training Set: 4798 images
 
+Validation Set: 418 images
 
-Results:
+The Kaggle test dataset is used for final evaluation.
 
-Test Accuracy: 92.95% 
+🧹 Data Preprocessing & Augmentation
+✅ Applied on Training Set:
 
-Recall: 98.46%
+Width shift
 
-Precision: 91%
+Height shift
 
-Deployment link:
-https://pneumonia-detection-using-chest-x-ray-fgughjsrboqynep3mwbwqy.streamlit.app/
+Brightness shift
 
+Rotation
+
+Zoom
+
+Pixel intensity variation (channel_shift)
+
+Fill mode
+
+Pixel normalization using rescale
+
+✅ Applied on Validation & Test Set:
+
+Pixel normalization using rescale
+
+🖼 Input Configuration
+
+Image size: 64 × 64
+
+Batch size: 32
+
+Model Training
+
+A custom CNN model is trained for binary classification (Pneumonia / Normal).
+
+Loss Function: Binary Crossentropy
+
+Optimizer: Adam
+
+Output Layer: Sigmoid
+
+📊 Results (Test Set)
+Metric	Score
+Accuracy	92.95%
+Recall	98.46%
+Precision	91%
+▶️ How to Run Locally
+1) Clone the repository
+git clone <your-repo-link>
+cd <your-repo-folder>
+
+2) Install dependencies
+pip install -r requirements.txt
+
+3) Run the Streamlit app
+streamlit run app.py
+
+📌 Notes
+
+This project focuses on building an end-to-end pipeline:
+
+Dataset preprocessing
+
+CNN training + evaluation
+
+Streamlit interface for prediction
